@@ -4794,10 +4794,10 @@ This command is meant to be used from a Dired buffer."
 
 (defun denote--menu-bar-enable ()
   "Enable Denote menu bar."
-  (define-key-after global-map [menu-bar denote]
+  (define-key-after global-map [menu-bar tools denote]
     (easy-menu-binding
      (easy-menu-create-menu "Denote" denote--menu-contents) "Denote")
-    "Tools"))
+    'calendar))
 
 ;; Enable Denote menu bar by default
 (denote--menu-bar-enable)
